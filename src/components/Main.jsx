@@ -26,10 +26,11 @@ const handleSubmit = (e)=>{
 
 const handleClear = ()=>{
     setCount("")
+    setText([])
 }
 
   return (
-    <div className="Main">
+    <div className="main">
       <h2> Cümle Ekle</h2>
       <form className="add" onSubmit={handleSubmit}>
         <label htmlFor="İndex"> Cümle Sayısı:</label>
@@ -37,21 +38,21 @@ const handleClear = ()=>{
           type="number"
           value={count}
           onChange={(e) => setCount(e.target.value)}
-          max="7"
+          max="8"
           min ="0"
         />
        
          
-          <button className="Ekle"> Ekle</button>
+          <button className="ekle"> Ekle</button>
        
       </form>
       <button className="temizle" onClick={handleClear}>
       
         Temizle
       </button>
-      <div>
+      <div >
         {text.map((item, index) => {
-          return <p key={index}>{item}</p>;
+          return <p className="paragraf" key={index}>{item}</p>;
         })}
       </div>
     </div>
