@@ -1,29 +1,39 @@
 import { useState } from "react";
-import data from "../helper/data"
+import data from "../helper/data" // data verimizi import ediyoruz.
 
 const Main = () => {
+
+    // kullanacağım stateleri tanımlıyorum.
+    // count statetini kullanıcıdan alıyorum.
   const [count, setCount] = useState("");
+  // kullanıcıdan aldığım count a göre ekrana yazdıracağım cümle sayısını belirliyorum.
   const [text, setText] = useState([]);
 
-  console.log(count)
-  console.log(text);
-const handleSubmit = (e)=>{
- e.preventDefault();
- let amount = parseInt(count)
 
- if (count<=0){
-    alert("lütfen 1 ile 7 arasında sayı giriniz")
- }
+  // form içinde imput tanımlarsak ayrıca herhengi bir butona onClik göndermemize gerek kalmaz burda onu gösterdim.
+  // onSubmit methodu ile bu işlevi yerine getirir. Burada form elementine yazdığımız fonksiyomu tanımladım.
  
+const handleSubmit = (e)=>{
+  e.preventDefault();
+  let amount = parseInt(count);
+  // inputta girilen sayısı yakaladık yakaladığımız sayı ile ilgili koşulları yazdım.
+  // Burada inputun değerine max-min özelliği ile girilebilecek sayıları aşağıda tanımladım.
+  //Ancak yine de kullanıcaya bilgi vermek için bu koşulları yazdım. 
+  if (count <= 0) {
+    alert("lütfen 1 ile 7 arasında sayı giriniz");
+  }
 
- if (count > 7) {
-    e.preventDefault()
+  if (count > 7) {
+    e.preventDefault();
     alert("En Fazla 7 girebilirsiniz");
-    }
-    setText(data.slice(0, amount));
-    console.log(setText(data.slice(0, amount)));
-  };
+  }
 
+  // burda kullanıcı girdiği sayıyı kullanarak slice methodu ile girdiği sayı kadar data veri setimizden cümlemizi alıyoruz. Ve text statetimize gönderiyoruz.
+  setText(data.slice(0, amount));
+ 
+};
+
+// Temizle butonuna bastığımızda stateleri başlangıç durumuna getiriyoruz.
 const handleClear = ()=>{
     setCount("")
     setText([])
@@ -51,6 +61,7 @@ const handleClear = ()=>{
         Temizle
       </button>
       <div >
+        {/*Kullanıcıdan aldığımız counta göre text'e gönderilen sayı jadar cümleyi DOM'a gönderiyoruz.*/}
         {text.map((item, index) => {
           return <p className="paragraf" key={index}>{item}</p>;
         })}

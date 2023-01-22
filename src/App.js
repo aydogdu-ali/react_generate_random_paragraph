@@ -1,6 +1,6 @@
 
 import './App.css';
-import Main from './components/Main';
+import Main from './components/Main'; // App js de çağıracağımız componenti import ediyoruz.
 
 
 function App() {
