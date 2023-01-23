@@ -26,6 +26,7 @@ const handleSubmit = (e)=>{
   if (count > 7) {
     e.preventDefault();
     alert("En Fazla 7 girebilirsiniz");
+    return setCount("");
   }
 
   // burda kullanıcı girdiği sayıyı kullanarak slice methodu ile girdiği sayı kadar data veri setimizden cümlemizi alıyoruz. Ve text statetimize gönderiyoruz.
@@ -39,6 +40,7 @@ const handleClear = ()=>{
     setText([])
 }
 
+// Sil butonuna bastığımızda çalışacak fonksiyonu tanımlıyoruz.
 const handleDelete = (item) => {
 const deleteItem =item
 const index = text.indexOf(deleteItem)
