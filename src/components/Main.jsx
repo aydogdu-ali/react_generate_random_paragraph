@@ -40,11 +40,11 @@ const handleClear = ()=>{
 }
 
 const handleDelete = (item) => {
-
 const deleteItem =item
 const index = text.indexOf(deleteItem)
 if (index > -1) {
-   setCount((text.splice(index, 1)), 1);
+   setCount((text.splice(index, 1)));
+   
 }
 
 
@@ -63,7 +63,7 @@ if (index > -1) {
 
   return (
     <div className="main">
-      <h2> Cümle Ekle</h2>
+      <h2> Cümle Göster</h2>
       <form className="add" onSubmit={handleSubmit}>
         <label htmlFor="İndex"> Cümle Sayısı:</label>
         <input
@@ -89,7 +89,7 @@ if (index > -1) {
             <div key={index}>
             
               <p className="paragraf">{item}</p>
-              <button onClick={()=>handleDelete(item)}> Sil</button>
+              <button className="sil " onClick={()=>handleDelete(item)}> Sil</button>
             </div>
           );
         })}
