@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/aydogdu-ali/react_generate_random_paragraph/static/css/main.83d5312d.css",
-    "main.js": "/aydogdu-ali/react_generate_random_paragraph/static/js/main.8bd3affe.js",
-    "static/js/787.c798e7aa.chunk.js": "/aydogdu-ali/react_generate_random_paragraph/static/js/787.c798e7aa.chunk.js",
-    "index.html": "/aydogdu-ali/react_generate_random_paragraph/index.html",
-    "main.83d5312d.css.map": "/aydogdu-ali/react_generate_random_paragraph/static/css/main.83d5312d.css.map",
-    "main.8bd3affe.js.map": "/aydogdu-ali/react_generate_random_paragraph/static/js/main.8bd3affe.js.map",
-    "787.c798e7aa.chunk.js.map": "/aydogdu-ali/react_generate_random_paragraph/static/js/787.c798e7aa.chunk.js.map"
+    "main.css": "/react_generate_random_paragraph/static/css/main.83d5312d.css",
+    "main.js": "/react_generate_random_paragraph/static/js/main.43b1e39d.js",
+    "static/js/787.c798e7aa.chunk.js": "/react_generate_random_paragraph/static/js/787.c798e7aa.chunk.js",
+    "index.html": "/react_generate_random_paragraph/index.html",
+    "main.83d5312d.css.map": "/react_generate_random_paragraph/static/css/main.83d5312d.css.map",
+    "main.43b1e39d.js.map": "/react_generate_random_paragraph/static/js/main.43b1e39d.js.map",
+    "787.c798e7aa.chunk.js.map": "/react_generate_random_paragraph/static/js/787.c798e7aa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83d5312d.css",
-    "static/js/main.8bd3affe.js"
+    "static/js/main.43b1e39d.js"
   ]
 }
