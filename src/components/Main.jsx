@@ -39,6 +39,28 @@ const handleClear = ()=>{
     setText([])
 }
 
+const handleDelete = (item) => {
+
+const deleteItem =item
+const index = text.indexOf(deleteItem)
+if (index > -1) {
+   setCount((text.splice(index, 1)), 1);
+}
+
+
+ }
+   
+ 
+    
+   
+  
+
+
+
+
+
+
+
   return (
     <div className="main">
       <h2> Cümle Ekle</h2>
@@ -62,8 +84,14 @@ const handleClear = ()=>{
       </button>
       <div >
         {/*Kullanıcıdan aldığımız counta göre text'e gönderilen sayı jadar cümleyi DOM'a gönderiyoruz.*/}
-        {text.map((item, index) => {
-          return <p className="paragraf" key={index}>{item}</p>;
+        {text.map((item,index) => {
+          return (
+            <div key={index}>
+            
+              <p className="paragraf">{item}</p>
+              <button onClick={()=>handleDelete(item)}> Sil</button>
+            </div>
+          );
         })}
       </div>
     </div>
