@@ -30,7 +30,7 @@ const handleSubmit = (e)=>{
   }
 
   // burda kullanıcı girdiği sayıyı kullanarak slice methodu ile girdiği sayı kadar data veri setimizden cümlemizi alıyoruz. Ve text statetimize gönderiyoruz.
-  setText(data.slice(0, amount));
+  setText((data.slice(0, amount)));
  
 };
 
@@ -41,6 +41,8 @@ const handleClear = ()=>{
 }
 
 // Sil butonuna bastığımızda çalışacak fonksiyonu tanımlıyoruz.
+// Dom' gönderdiğimiz cümleyi yakalayıp index numarasını alıp
+// bu index numarasanının silinmesini sağlıyoruz.
 const handleDelete = (item) => {
 const deleteItem =item
 const index = text.indexOf(deleteItem)
@@ -85,8 +87,8 @@ if (index > -1) {
         Temizle
       </button>
       <div >
-        {/*Kullanıcıdan aldığımız counta göre text'e gönderilen sayı jadar cümleyi DOM'a gönderiyoruz.*/}
-        {text.map((item,index) => {
+      
+        {text.map((item,index) => { // destrc.
           return (
             <div key={index}>
             
