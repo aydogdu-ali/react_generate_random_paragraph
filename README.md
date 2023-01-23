@@ -15,4 +15,9 @@
 #Uygulamanın sonucu aşağıdaki bağlantıyı tıklayarak görebilirsiniz.
 
 https://aydogdu-ali.github.io/react_generate_random_paragraph/
-[react_paragraf.webm](https://user-images.githubusercontent.com/108414013/214045542-59253155-c379-4d29-a164-cb94d727fff2.webm)
+
+
+
+
+https://user-images.githubusercontent.com/108414013/214046701-e527a259-61ad-4414-94df-18e435e0715b.mp4
+
